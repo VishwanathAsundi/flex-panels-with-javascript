@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Clock in Javascript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <div class="panels">
+            <div class="panel panel1">
+                <h3>Bastard</h3>
+                <h3>John Snow</h3>
+                <h3>The Real King</h3>
+            </div>
+            <div class="panel panel2">
+                <h3>Dwarf</h3>
+                <h3>Tyrian Lannister</h3>
+                <h3>Intelligent</h3>
+            </div>
+            <div class="panel panel3">
+                <h3>Hi</h3>
+                <h3>Kaleesi</h3>
+                <h3>Dracarys</h3>
+            </div>
+            <div class="panel panel4">
+                <h3>Knight King</h3>
+                <h3>White walker</h3>
+                <h3>Immortal</h3>
+            </div>
+            <div class="panel panel5">
+                <h3>Cute</h3>
+                <h3>Sansa Stark</h3>
+                <h3>Queen of winterfell</h3>
+            </div>
+            <div class="panel panel6">
+                <h3>Queen</h3>
+                <h3>Cersi Lannister</h3>
+                <h3>Whore</h3>
+            </div>
+            <div class="panel panel7">
+                <h3>Short</h3>
+                <h3>Arya Stark</h3>
+                <h3>Brave</h3>
+            </div>
+            <div class="panel panel8">
+                <h3>Dothraki</h3>
+                <h3>Khal Drogo</h3>
+                <h3>Dead</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        const panels = document.querySelectorAll('.panel');
+        function handleClick() {
+            this.classList.toggle('power');
+        }
+        function handleTransition(e) {
+            if (e.propertyName.includes("flex")) {
+                this.classList.toggle('active');
+            }
+        }
+
+        panels.forEach(panel => panel.addEventListener('click', handleClick));
+        panels.forEach(panel => panel.addEventListener('transitionend', handleTransition));
+
+    </script>
+
+</body>
+
+</html>
